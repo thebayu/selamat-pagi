@@ -7,8 +7,8 @@
     body {
       font-family: 'Comic Sans MS', cursive;
       text-align: center;
-      background-color: #fef4e8;
-      color: #444;
+      background-color: #f1f9ff;
+      color: #333;
       padding: 40px;
     }
     h1 {
@@ -19,33 +19,34 @@
       animation: goyang 1s infinite alternate;
     }
     @keyframes goyang {
-      from { transform: rotate(-10deg); }
-      to   { transform: rotate(10deg); }
+      from { transform: rotate(-8deg); }
+      to   { transform: rotate(8deg); }
     }
     .btn {
       margin-top: 20px;
-      background-color: #ff66cc;
+      background-color: #66ccff;
+      color: white;
       border: none;
       padding: 15px 30px;
       border-radius: 10px;
       font-size: 1.2em;
       cursor: pointer;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
 
-  <div class="emoji">😪</div>
+  <div class="emoji">☕</div>
   <h1>Selamat Pagi, Dinda!</h1>
-  <p>Kamu masih nempel sama bantal? Bantalnya udah nanya: “Dinda kapan move on?” 🤭</p>
-  <button class="btn" onclick="ubahPesan()">Klik kalau kamu manis 😘</button>
+  <p>Kopi udah siap, semangatmu juga harus ikut panas! 🔥</p>
+  <button class="btn" onclick="ubahPesan()">Klik kalau Dinda siap kerja 💪</button>
 
   <script>
     function ubahPesan() {
-      document.querySelector('.emoji').textContent = "🌞";
-      document.querySelector('h1').textContent = "Semangat Pagi, Ratu Rebahan!";
-      document.querySelector('p').textContent = "Hari ini indah, apalagi kalau Dinda senyum-senyum kayak sekarang 😍";
+      document.querySelector('.emoji').textContent = "🚀";
+      document.querySelector('h1').textContent = "Dinda Siap Menaklukkan Dunia!";
+      document.querySelector('p').textContent = "Laptop nyala, semangat menyala, dan Dinda makin bersinar! ✨";
     }
   </script>
 

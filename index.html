@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Pagi, Dinda!</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #fffbe7;
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .emoji {
+      font-size: 5em;
+      animation: goyang 1s infinite alternate;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0.3em 0;
+      padding: 0 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 0.5em;
+      max-width: 90%;
+      padding: 0 20px;
+    }
+
+    @keyframes goyang {
+      from { transform: rotate(-10deg); }
+      to { transform: rotate(10deg); }
+    }
+
+    .btn {
+      margin-top: 20px;
+      background-color: #f06292;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ec407a;
+    }
+
+    .btn:disabled {
+      background-color: #c0c0c0;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="emoji">🌄</div>
+  <h1>Selamat Pagi, Dinda!</h1>
+  <p>Buka mata, tarik napas, dan ingat... kamu pasti luar biasa banget hari ini! 😘</p>
+  <button class="btn" onclick="nextSemangat()">Klik aku terus~ 🤭</button>
+
+  <script>
+    const semangatList = [
+      {
+        emoji: "☕",
+        title: "Kopi udah siap, Dinda!",
+        text: "Tapi lebih nyegerin senyum kamu pagi ini deh kayaknya😍"
+      },
+      {
+        emoji: "🧸",
+        title: "Pengen rebahan terus?",
+        text: "Kasur memang sayang kamu... tapi kerjaan juga nungguin kamu 😅"
+      },
+      {
+        emoji: "🚀",
+        title: "Ayo lepas landas!",
+        text: "Bukan ke luar angkasa, tapi ke kerjaan yang di depan mata 🤓"
+      },
+      {
+        emoji: "🚀",
+        title: "Waktunya Meluncur, Dinda!",
+        text: "Semangaatt kerjanyaa yaaaa!"
+      },
+      {
+        title: "kamu Keren Banget!",
+        text: "Kerja aja sambil senyum-senyum tuuuh!. Orang lain? Paling sambil ngeluh 😝"
+      },
+      {
+        emoji: "😝",
+        title: "Pantun semangat nih buat kamu!",
+        text: "Jalan-jalan ke Kota Lama\nMampir Sebentar Beli Pepaya.\nMeski Kerjaan Bikin Pusing Kepala,\nAku Harap Kamu tetap bisa ceria yaaa! 😝"
+      }
+    ];
+
+    let index = 0;
+
+    function nextSemangat() {
+      const emoji = document.querySelector('.emoji');
+      const title = document.querySelector('h1');
+      const text = document.querySelector('p');
+      const button = document.querySelector('.btn');
+
+      const data = semangatList[index];
+      emoji.textContent = data.emoji;
+      title.textContent = data.title;
+      text.innerText = data.text;
+
+      index++;
+
+      if (index >= semangatList.length) {
+        button.disabled = true;
+        button.textContent = "Udah selesai, tapi kamu tetap gemesin 😝";
+      }
+    }
+  </script>
+
+</body>
+</html>

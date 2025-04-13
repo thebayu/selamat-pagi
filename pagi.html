@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Pagi!</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      background-color: #fdf6e3;
+      color: #333;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    .emoji {
+      font-size: 5em;
+      animation: goyang 1s infinite alternate;
+    }
+    @keyframes goyang {
+      from { transform: rotate(-10deg); }
+      to   { transform: rotate(10deg); }
+    }
+    .btn {
+      margin-top: 20px;
+      background-color: #ffcc00;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="emoji">😴</div>
+  <h1>Selamat Pagi, Pejuang Rebahan!</h1>
+  <p>Alarm sudah berdering 5 kali... tapi kamu masih menyatu dengan kasur 🤭</p>
+  <button class="btn" onclick="ubahPesan()">Klik untuk semangat!</button>
+
+  <script>
+    function ubahPesan() {
+      document.querySelector('.emoji').textContent = "🔥";
+      document.querySelector('h1').textContent = "Ayo Bangun dan Taklukkan Dunia!";
+      document.querySelector('p').textContent = "Tapi pelan-pelan aja... jangan lupa sarapan 🍞☕";
+    }
+  </script>
+
+</body>
+</html>
